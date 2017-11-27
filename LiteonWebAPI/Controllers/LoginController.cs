@@ -33,9 +33,8 @@ namespace LiteonWebAPI.Controllers
         {
             String userid = para.userid;
             String inputPwd = para.pwd;
-            String outPwd = MyMd5.MD5Encrypt(inputPwd);
             var le = EFClass.GetEF();
-            var userList = le.Users.Where(p => p.UserID == userid && p.Password.ToUpper() == outPwd.ToUpper()).ToList();
+            var userList = le.Users.Where(p => p.UserID == userid && p.Password.ToUpper() == inputPwd.ToUpper()).ToList();
             if (userList.Count == 1)
             {
                 rm.ResponseState = ResponseState.Successed;
