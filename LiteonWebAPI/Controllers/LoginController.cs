@@ -29,9 +29,11 @@ namespace LiteonWebAPI.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public void Login(dynamic para)
+        public HttpResponseMessage Login(dynamic para)
         {
+
             String userid = para.userid;
+            
             String inputPwd = para.pwd;
             var le = EFClass.GetEF();
             var userList = le.Users.Where(p => p.UserID == userid && p.Password.ToUpper() == inputPwd.ToUpper()).ToList();
@@ -46,7 +48,7 @@ namespace LiteonWebAPI.Controllers
                 rm.ResponseState = ResponseState.Failed;
                 rm.ResponseMessage = "用户名或密码错误";
             }
-
+            return ToJson.toJson(rm);
         }
 
         // PUT api/<controller>/5
