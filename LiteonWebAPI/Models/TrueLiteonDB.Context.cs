@@ -13,10 +13,11 @@ namespace LiteonWebAPI.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TrueLiteonDBEntities2 : DbContext
+    public partial class TrueLiteonDBEntities : DbContext
     {
-        public TrueLiteonDBEntities2()
-            : base("name=TrueLiteonDBEntities2")
+        public TrueLiteonDBEntities()
+            //: base("name=LocalLiteonDBEntities")
+            : base("name=AzureLiteonDBEntities")
         {
         }
     

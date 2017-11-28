@@ -12,9 +12,8 @@ namespace LiteonWebAPI.MyClass
 {
     public class EFClass
     {
-        public static TrueLiteonDBEntities2 GetEF() {
-            return new TrueLiteonDBEntities2();
-            //return new LocalLiteonDBEntities();
+        public static TrueLiteonDBEntities GetEF() {
+            return new TrueLiteonDBEntities();
         }
     }
     public class ToJson
