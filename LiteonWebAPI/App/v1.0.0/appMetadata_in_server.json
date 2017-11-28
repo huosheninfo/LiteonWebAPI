@@ -1,0 +1,21 @@
+{
+	"appInfo":{
+		"androidApp":{
+			"changeLog":"",
+			"downloadURL":"http://liteonapi.azurewebsites.net/app/v1.0.0/app.apk",
+			"version":"1.0.1"
+		},
+		"iosApp":{
+			"changeLog":"",
+			"downloadURL":"http://liteonapi.azurewebsites.net/app/v1.0.0/app.ipa",
+			"version":"1.0.1"
+		}
+	},
+	"resourceInfo":{
+		"appVersion":"",
+		"downloadURL":"http://liteonapi.azurewebsites.net/app/v1.0.0/www.zip",
+		"indexURL":"/LiteonAPP/index.w",
+		"mode":"2",
+		"version":"v-v-zh_CN-"
+	}
+}

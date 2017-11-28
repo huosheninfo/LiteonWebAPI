@@ -271,13 +271,71 @@
     <Compile Include="ViewModel\UserToRoles.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\v1.0.0\index.html" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\Forget.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\Forget.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\Forget.w.html" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\Forget.w.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\Home.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\Home.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\Home.w.html" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\Home.w.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\img\allbackground.jpg" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\img\fb.jpg" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\img\regsucc.png" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\img\vx.jpg" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\index.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\index.w.html" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\index.w.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\login.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\login.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\login.w.html" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\login.w.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\registeMobile.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\registeMobile.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\registeMobile.w.html" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\registeMobile.w.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\RegisteSucc.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\RegisteSucc.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\RegisteSucc.w.html" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\RegisteSucc.w.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\common.min.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\bootstrap.min.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\bootstrap\lib\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\comp.min.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\comp.min.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\attachment\css\ico_all.png" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\common\css\forms.pc.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\common\css\IE\button.ie9.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\common\css\IE\input.ie.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\common\css\IE\labelEdit.ie9.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\common\css\IE\radio.ie8.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\common\css\img\chevron.png" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\common\css\img\datePicker.png" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\common\css\ios.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\datePicker\css\datePicker.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\input\css\img\left.gif" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\input\css\img\navLeft.gif" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\input\css\img\navRight.gif" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\input\css\img\right.gif" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css1\iconfont.svg" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css2\iconfont.svg" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css3\iconfont.svg" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css4\iconfont.svg" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css\fonts\ionicons.svg" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\picker\css\picker.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\picker\css\popPicker.css" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\windowOpener\windowOpener.config.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\windowOpener\windowOpener.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\core.min.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\lib\base\layerManager.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\lib\base\modernizr-2.8.3.min.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\lib\cordova\weixin\sha1.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\lib\cordova\weixin\wxApi.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\lib\debug\console.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\lib\require\require.2.1.10.js" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\resources\system.res.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Models\LocalLiteonDB.Context.tt">
@@ -336,12 +394,35 @@
     <Content Include="Models\LocalLiteonDB.edmx.diagram">
       <DependentUpon>LocalLiteonDB.edmx</DependentUpon>
     </Content>
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="App\v1.0.0\appMetadata_in_server.json" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\activity2WindowURL.json" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\app.json" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\Forget.w" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\Home.w" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\index.w" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\login.w" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\registeMobile.w" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\LiteonAPP\RegisteSucc.w" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\bootstrap\lib\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\bootstrap\lib\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\bootstrap\lib\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\bootstrap\lib\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css1\iconfont.eot" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css1\iconfont.ttf" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css1\iconfont.woff" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css2\iconfont.eot" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css2\iconfont.ttf" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css2\iconfont.woff" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css3\iconfont.eot" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css3\iconfont.ttf" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css3\iconfont.woff" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css4\iconfont.eot" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css4\iconfont.ttf" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css4\iconfont.woff" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css\fonts\ionicons.eot" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css\fonts\ionicons.ttf" />
+    <Content Include="App\v1.0.0\v-v-zh_CN-\system\components\justep\lib\css\fonts\ionicons.woff" />
+    <Content Include="App\v1.0.0\www.zip" />
     <None Include="Properties\PublishProfiles\LiteonAPI - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\LiteonAPI - Web Deploy.pubxml" />
     <Content Include="Web.config" />
@@ -352,7 +433,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
-    <Content Include="Content\Site.css" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -363,6 +443,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\X5BaasService\X5BaasService.csproj">
+      <Project>{58d0b787-9c79-4b8a-84a3-88cd0303e8ec}</Project>
+      <Name>X5BaasService</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

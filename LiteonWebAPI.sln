@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteonWebAPI", "LiteonWebAPI\LiteonWebAPI.csproj", "{4444A52A-D4B1-4252-8641-D9ED4E16C245}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X5BaasService", "X5BaasService\X5BaasService.csproj", "{58D0B787-9C79-4B8A-84A3-88CD0303E8EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4444A52A-D4B1-4252-8641-D9ED4E16C245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4444A52A-D4B1-4252-8641-D9ED4E16C245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4444A52A-D4B1-4252-8641-D9ED4E16C245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D0B787-9C79-4B8A-84A3-88CD0303E8EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D0B787-9C79-4B8A-84A3-88CD0303E8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D0B787-9C79-4B8A-84A3-88CD0303E8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D0B787-9C79-4B8A-84A3-88CD0303E8EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
