@@ -16,7 +16,7 @@ define(function(require) {
 	 * 页面加载
 	 **************************************************************************/
 	Model.prototype.modelLoad = function(event) {
-
+		console.info(justep.Util.getCookie("userid"))
 	};
 
 	Model.prototype.ReturnBtnClick = function(event) {

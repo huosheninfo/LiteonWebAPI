@@ -23,5 +23,6 @@ namespace LiteonWebAPI.Models
         public string Phone { get; set; }
         public string Address { get; set; }
         public string UserID { get; set; }
+        public string ADAccount { get; set; }
     }
 }

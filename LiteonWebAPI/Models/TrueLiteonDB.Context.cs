@@ -16,8 +16,7 @@ namespace LiteonWebAPI.Models
     public partial class TrueLiteonDBEntities : DbContext
     {
         public TrueLiteonDBEntities()
-            //: base("name=LocalLiteonDBEntities")
-            : base("name=AzureLiteonDBEntities")
+            : base("name=AzureLiteonActionEntities")
         {
         }
     
