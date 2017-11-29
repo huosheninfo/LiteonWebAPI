@@ -9,14 +9,15 @@ using LiteonWebAPI.ViewModel;
 using LiteonWebAPI.Models;
 namespace LiteonWebAPI.MyClass
 {
-    public class DBHelper
-    {
-
-        public enum ConnectionObject
+    public enum ConnectionObject
         {
             Liteon_base = 1,
             Liteon_action = 2,
         }
+    public static class DBHelper
+    {
+
+        
 
         private static String connstr = ConfigurationManager.ConnectionStrings["LocalLiteon_BaseDBEntities"].ConnectionString;
 
