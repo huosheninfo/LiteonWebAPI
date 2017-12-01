@@ -16,10 +16,12 @@ namespace LiteonWebAPI.Models
     {
         public string RealmID { get; set; }
         public string RealmDes { get; set; }
-        public string OpenID { get; set; }
+        public string AppID { get; set; }
         public System.DateTime CreatedDate { get; set; }
         public string ParentID { get; set; }
         public long Sequence { get; set; }
         public string Uri { get; set; }
+        public string Security { get; set; }
+        public int Forzen { get; set; }
     }
 }

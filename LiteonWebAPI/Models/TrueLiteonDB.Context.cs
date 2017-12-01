@@ -12,11 +12,13 @@ namespace LiteonWebAPI.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class TrueLiteonDBEntities : DbContext
     {
         public TrueLiteonDBEntities()
-            : base("name=AzureLiteonActionEntities")
+            : base("name=TrueLiteonDBEntities")
         {
         }
     
@@ -32,8 +34,32 @@ namespace LiteonWebAPI.Models
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<ThirdPartyIDs> ThirdPartyIDs { get; set; }
         public virtual DbSet<UserInfo> UserInfo { get; set; }
-        public virtual DbSet<UserOutMappings> UserOutMappings { get; set; }
         public virtual DbSet<UserRoles> UserRoles { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+    
+        public virtual int proc_Regsiter(string siteCodes, string cNameTrad, string email, string userID, string aDAccount)
+        {
+            var siteCodesParameter = siteCodes != null ?
+                new ObjectParameter("SiteCodes", siteCodes) :
+                new ObjectParameter("SiteCodes", typeof(string));
+    
+            var cNameTradParameter = cNameTrad != null ?
+                new ObjectParameter("CNameTrad", cNameTrad) :
+                new ObjectParameter("CNameTrad", typeof(string));
+    
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var userIDParameter = userID != null ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(string));
+    
+            var aDAccountParameter = aDAccount != null ?
+                new ObjectParameter("ADAccount", aDAccount) :
+                new ObjectParameter("ADAccount", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("proc_Regsiter", siteCodesParameter, cNameTradParameter, emailParameter, userIDParameter, aDAccountParameter);
+        }
     }
 }

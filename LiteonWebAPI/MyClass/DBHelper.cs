@@ -9,27 +9,34 @@ using LiteonWebAPI.ViewModel;
 using LiteonWebAPI.Models;
 namespace LiteonWebAPI.MyClass
 {
-    public enum ConnectionObject
-        {
-            Liteon_base = 1,
-            Liteon_action = 2,
-        }
+
     public static class DBHelper
     {
 
-        
 
-        private static String connstr = ConfigurationManager.ConnectionStrings["LocalLiteon_BaseDBEntities"].ConnectionString;
 
-        public static void SetConnstr(ConnectionObject oc)
+        private static String connstr = "";
+        private static void CheckedConn()
+        {
+            if (connstr == "")
+            {
+                connstr = ConfigurationManager.ConnectionStrings["LocalLiteonBaseDBEntities"].ConnectionString;
+            }
+        }
+
+        public static void SetConnstrToBase()
+        {
+            connstr = ConfigurationManager.ConnectionStrings["LocalLiteonBaseDBEntities"].ConnectionString;
+        }
+        public static void SetConnstr(CObject oc)
         {
             switch (oc)
             {
-                case ConnectionObject.Liteon_base:
-                    connstr = ConfigurationManager.ConnectionStrings["AzureLiteonBaseEntities"].ConnectionString;
+                case CObject.Liteon_base:
+                    connstr = ConfigurationManager.ConnectionStrings["LocalLiteonBaseDBEntities"].ConnectionString;
                     break;
-                case ConnectionObject.Liteon_action:
-                    connstr = ConfigurationManager.ConnectionStrings["AzureLiteonActionEntities"].ConnectionString;
+                case CObject.Liteon_action:
+                    connstr = ConfigurationManager.ConnectionStrings["LocalLiteonActionDBEntities"].ConnectionString;
                     break;
                 default:
                     break;
@@ -37,6 +44,7 @@ namespace LiteonWebAPI.MyClass
         }
         public static Boolean UseBoolProc(String sql, SqlParameter[] p)
         {
+            CheckedConn();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);
@@ -53,6 +61,7 @@ namespace LiteonWebAPI.MyClass
 
         public static DataTable UseDTProc(String sql, SqlParameter[] p)
         {
+            CheckedConn();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);

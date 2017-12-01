@@ -16,7 +16,7 @@ namespace LiteonWebAPI.Controllers
     public class LoginController : ApiController
     {
         ReturnMessage rm = new ReturnMessage();
-
+        HttpContext context = HttpContext.Current;
 
         // POST api/<controller>
         [HttpPost]
@@ -78,17 +78,15 @@ namespace LiteonWebAPI.Controllers
             {
                 var le = EFClass.GetEF();
                 
-                var userList = le.Users.Where(p => p.UserID == userid && p.Password.ToUpper() == inputPwd.ToUpper()).ToList();
+                var userList = le.Users.Where(p => p.UserID == userid.ToUpper() && p.Password == inputPwd).ToList();
                 if (userList.Count == 1)
                 {
-                    var context = HttpContext.Current;
-
+                    
                     Users us = userList[0];
                     var urList = le.UserRoles.Where(p => p.UserID == us.UserID).ToList();
-                    context.Session["roleid"] = urList;
                     rm.ResponseState = ResponseState.Successed;
                     rm.ResponseMessage = "登录成功";
-                    rm.ResponseData = JsonConvert.SerializeObject(us.UserID);
+                    rm.ResponseData = us.UserID;
                 }
                 else
                 {

@@ -10,9 +10,15 @@ using System.Text;
 
 namespace LiteonWebAPI.MyClass
 {
+    public enum CObject
+    {
+        Liteon_base = 1,
+        Liteon_action = 2,
+    }
     public class EFClass
     {
-        public static TrueLiteonDBEntities GetEF() {
+        public static TrueLiteonDBEntities GetEF()
+        {
             return new TrueLiteonDBEntities();
         }
     }

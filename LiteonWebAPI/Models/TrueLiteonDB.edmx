@@ -11,7 +11,7 @@
           </Key>
           <Property Name="GUID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="RegionID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Alias" Type="nchar" MaxLength="2" Nullable="false" />
+          <Property Name="Alias" Type="nchar" MaxLength="2" />
           <Property Name="RegionName" Type="nvarchar" MaxLength="50" />
           <Property Name="RegionDes" Type="nchar" MaxLength="10" />
           <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
@@ -34,11 +34,12 @@
           </Key>
           <Property Name="RealmID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="RealmDes" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="OpenID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AppID" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="CreatedDate" Type="datetime" Nullable="false" />
-          <Property Name="ParentID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ParentID" Type="nvarchar" MaxLength="50" />
           <Property Name="Sequence" Type="bigint" Nullable="false" />
           <Property Name="Uri" Type="nvarchar" MaxLength="50" />
+          <Property Name="Security" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="RoleRealms">
           <Key>
@@ -76,22 +77,15 @@
           <Property Name="GUID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="50" />
           <Property Name="EmployeeID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Region" Type="nchar" MaxLength="2" />
+          <Property Name="Region" Type="nvarchar" MaxLength="50" />
           <Property Name="RegisterDate" Type="datetime" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="Phone" Type="nvarchar" MaxLength="50" />
           <Property Name="Address" Type="nvarchar" MaxLength="500" />
           <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ADAccount" Type="nvarchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="UserOutMappings">
-          <Key>
-            <PropertyRef Name="GUID" />
-          </Key>
-          <Property Name="GUID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="LoginID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="IDCard" Type="nvarchar" MaxLength="6" />
+          <Property Name="Birthday" Type="datetime" />
         </EntityType>
         <EntityType Name="UserRoles">
           <Key>
@@ -111,6 +105,13 @@
           <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="LoginDate" Type="datetime" Nullable="false" />
         </EntityType>
+        <Function Name="proc_Regsiter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SiteCodes" Type="nvarchar" Mode="In" />
+          <Parameter Name="CNameTrad" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+          <Parameter Name="ADAccount" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="TrueLiteonDBModelStoreContainer">
           <EntitySet Name="Dic_Regions" EntityType="Self.Dic_Regions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Logging" EntityType="Self.Logging" Schema="dbo" store:Type="Tables" />
@@ -119,7 +120,6 @@
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThirdPartyIDs" EntityType="Self.ThirdPartyIDs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="UserOutMappings" EntityType="Self.UserOutMappings" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -134,7 +134,7 @@
           </Key>
           <Property Name="GUID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="RegionID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Alias" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Alias" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
           <Property Name="RegionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="RegionDes" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
@@ -157,11 +157,12 @@
           </Key>
           <Property Name="RealmID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="RealmDes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="OpenID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AppID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="ParentID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ParentID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Sequence" Type="Int64" Nullable="false" />
           <Property Name="Uri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Security" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="RoleRealms">
           <Key>
@@ -199,22 +200,15 @@
           <Property Name="GUID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="EmployeeID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Region" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="RegisterDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ADAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="UserOutMappings">
-          <Key>
-            <PropertyRef Name="GUID" />
-          </Key>
-          <Property Name="GUID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="LoginID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IDCard" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="UserRoles">
           <Key>
@@ -242,9 +236,15 @@
           <EntitySet Name="Roles" EntityType="Self.Roles" />
           <EntitySet Name="ThirdPartyIDs" EntityType="Self.ThirdPartyIDs" />
           <EntitySet Name="UserInfo" EntityType="Self.UserInfo" />
-          <EntitySet Name="UserOutMappings" EntityType="Self.UserOutMappings" />
           <EntitySet Name="UserRoles" EntityType="Self.UserRoles" />
           <EntitySet Name="Users" EntityType="Self.Users" />
+          <FunctionImport Name="proc_Regsiter">
+            <Parameter Name="SiteCodes" Mode="In" Type="String" />
+            <Parameter Name="CNameTrad" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="UserID" Mode="In" Type="String" />
+            <Parameter Name="ADAccount" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -282,11 +282,12 @@
               <MappingFragment StoreEntitySet="Realms">
                 <ScalarProperty Name="RealmID" ColumnName="RealmID" />
                 <ScalarProperty Name="RealmDes" ColumnName="RealmDes" />
-                <ScalarProperty Name="OpenID" ColumnName="OpenID" />
+                <ScalarProperty Name="AppID" ColumnName="AppID" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="ParentID" ColumnName="ParentID" />
                 <ScalarProperty Name="Sequence" ColumnName="Sequence" />
                 <ScalarProperty Name="Uri" ColumnName="Uri" />
+                <ScalarProperty Name="Security" ColumnName="Security" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -335,16 +336,8 @@
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="ADAccount" ColumnName="ADAccount" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="UserOutMappings">
-            <EntityTypeMapping TypeName="TrueLiteonDBModel.UserOutMappings">
-              <MappingFragment StoreEntitySet="UserOutMappings">
-                <ScalarProperty Name="GUID" ColumnName="GUID" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="LoginID" ColumnName="LoginID" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -368,6 +361,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="proc_Regsiter" FunctionName="TrueLiteonDBModel.Store.proc_Regsiter" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

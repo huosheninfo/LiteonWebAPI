@@ -24,5 +24,7 @@ namespace LiteonWebAPI.Models
         public string Address { get; set; }
         public string UserID { get; set; }
         public string ADAccount { get; set; }
+        public string IDCard { get; set; }
+        public Nullable<System.DateTime> Birthday { get; set; }
     }
 }

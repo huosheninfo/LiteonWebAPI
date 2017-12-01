@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e4312685358449639d930f930224552c" Name="Diagram1">
+      <Diagram DiagramId="554e443b276c44d4b88b348b83ab229e" Name="Diagram1">
         <EntityTypeShape EntityType="TrueLiteonDBModel.Dic_Regions" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TrueLiteonDBModel.Logging" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TrueLiteonDBModel.Realms" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
@@ -12,9 +12,8 @@
         <EntityTypeShape EntityType="TrueLiteonDBModel.Roles" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TrueLiteonDBModel.ThirdPartyIDs" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TrueLiteonDBModel.UserInfo" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TrueLiteonDBModel.UserOutMappings" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TrueLiteonDBModel.UserRoles" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TrueLiteonDBModel.Users" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrueLiteonDBModel.UserRoles" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrueLiteonDBModel.Users" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

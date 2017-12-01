@@ -19,7 +19,7 @@ namespace LiteonWebAPI.MyClass
         /// <returns></returns>
         public static String MobilePortal_NoEmailEmployeeCheck(LiteonUser lu)
         {
-            DBHelper.SetConnstr(ConnectionObject.Liteon_base);
+            DBHelper.SetConnstr(CObject.Liteon_base);
             SqlParameter[] p = new SqlParameter[] {
                 new SqlParameter("@SiteCode",SqlDbType.NVarChar,20){Value= lu.SiteCode },
                 new SqlParameter("@UserName",SqlDbType.NVarChar,30){Value= lu.UserName },
@@ -42,7 +42,7 @@ namespace LiteonWebAPI.MyClass
         /// <returns></returns>
         public static ReturnLiteonUser MobilePortal_GetEmpInfoViaAccount(String Loginid)
         {
-            DBHelper.SetConnstr(ConnectionObject.Liteon_base);
+            DBHelper.SetConnstr(CObject.Liteon_base);
             SqlParameter[] p = new SqlParameter[] {
                 new SqlParameter("@LogonID",SqlDbType.NVarChar,20){Value= Loginid },
                 new SqlParameter("@SiteCodes",SqlDbType.NVarChar,1000),
@@ -76,16 +76,9 @@ namespace LiteonWebAPI.MyClass
         /// <returns></returns>
         public static bool RegsiterAction(ReturnLiteonUser rlu, String adid)
         {
-            DBHelper.SetConnstr(ConnectionObject.Liteon_action);
-            SqlParameter[] p = new SqlParameter[] {
-                new SqlParameter("@ADAccount",SqlDbType.NVarChar,20){Value= adid },
-                new SqlParameter("@SiteCodes",SqlDbType.NVarChar,50){Value= rlu.SiteCodes },
-                new SqlParameter("@CNameTrad",SqlDbType.NVarChar,20){Value= rlu.CNameTrad },
-                new SqlParameter("@Email",SqlDbType.NVarChar,50){Value= rlu.Email },
-                new SqlParameter("@UserID",SqlDbType.NVarChar,30){Value= rlu.EmployeeID }
-            };
-
-            return DBHelper.UseBoolProc("proc_Regsiter", p);
+            var le = EFClass.GetEF();
+            int rows = le.proc_Regsiter(rlu.SiteCodes, rlu.CNameTrad, rlu.Email, rlu.EmployeeID, adid);
+            return rows > 0;
 
         }
 
